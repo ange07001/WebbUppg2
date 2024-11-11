@@ -1,0 +1,21 @@
+*{
+    overflow-x: hidden;
+    margin: 0;
+}
+
+body.index .container{
+    min-height: 100vh;
+    min-width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto 4fr 3fr 6fr;
+    grid-template-areas: 
+    "Banner1 Banner1"
+    "Header Nav"
+    "Banner2 Banner2"
+    "Picture Picture"
+    "Phones Phones"
+    "News LatestNews"
+    "Footer Footer"
+    ;
+}   
