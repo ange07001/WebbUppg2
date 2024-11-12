@@ -3,19 +3,96 @@
     margin: 0;
 }
 
-body.index .container{
+body.index .Container{
     min-height: 100vh;
     min-width: 100vw;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto 4fr 3fr 6fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto 4fr 3fr 6fr 2fr;
     grid-template-areas: 
-    "Banner1 Banner1"
-    "Header Nav"
-    "Banner2 Banner2"
-    "Picture Picture"
-    "Phones Phones"
-    "News LatestNews"
-    "Footer Footer"
+    "Banner1 Banner1 Banner1 Banner1"
+    "Header Nav Nav Nav"
+    "Banner2 Banner2 Banner2 Banner2"
+    "Picture Picture Picture Picture"
+    "Phones Phones Phones Phones"
+    "News News LatestNews LatestNews"
+    "Footer Footer Footer Footer";
     ;
 }   
+
+body.index .Banner1{
+    grid-area: Banner1;
+    background-color: green;
+    text-align: center;
+    padding: 0.4vh 0px 0.4vh 0px;
+    font-size: 1.6vh;
+}
+
+body.index header{
+    grid-area: Header;
+    background-color: red;
+    padding: 1.5vh 0vh 1.5vh 1vw;;
+    display: flex;
+    align-items: center;
+}
+
+body.index header h1{
+    padding: 0vh 0.5vw 0vh 1vw;
+    font-size: 3vh;
+}
+
+body.index header img{
+    width: auto;
+    height: 3.5vh;
+}
+
+body.index nav{
+    grid-area: Nav;
+    background-color: gray;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+body.index nav ul{
+    list-style-type: none;
+    display: flex;
+}
+
+body.index nav ul li{
+    padding: 0vw 1vw 0vw 1vw;
+    font-size: 2vh;
+}
+
+body.index .Banner2{
+    grid-area: Banner2;
+    background-color: yellow;
+    text-align: center;
+    padding: 0.4vh 0px 0.4vh 0px;
+    font-size: 1.6vh;
+}
+
+body.index .Picture{
+    grid-area: Picture;
+    background-color: orange;
+}
+
+body.index .Phones{
+    grid-area: Phones;
+    background-color: pink;
+}
+
+body.index .News{
+    grid-area: News;
+    background-color: purple;
+}
+
+body.index .LatestNews{
+    grid-area: LatestNews;
+    background-color: brown;
+}
+
+body.index footer{
+    grid-area: Footer;
+    background-color: black;
+}
