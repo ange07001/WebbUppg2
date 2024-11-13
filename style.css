@@ -73,12 +73,30 @@ body.index .Banner2{
 
 body.index .Picture{
     grid-area: Picture;
-    background-color: orange;
+    background-color: #EDD8FF;
+    text-align: center;
+    position: relative;
+}
+
+body.index .Picture h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 5vw;
+}
+
+body.index .Picture img{
+    width: 50%;
+    height: auto;
+    padding: 0 25%;
+    display: block;
 }
 
 body.index .Phones{
     grid-area: Phones;
-    background-color: pink;
+    background-color: orange;
 }
 
 body.index .News{
