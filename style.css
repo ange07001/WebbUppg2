@@ -17,7 +17,6 @@ body.index .Container{
     "Phones Phones Phones Phones"
     "News News LatestNews LatestNews"
     "Footer Footer Footer Footer";
-    ;
 }   
 
 body.index .Banner1{
@@ -25,7 +24,7 @@ body.index .Banner1{
     background-color: green;
     text-align: center;
     padding: 0.4vh 0px 0.4vh 0px;
-    font-size: 1.6vh;
+    font-size: 1.65vh;
 }
 
 body.index header{
@@ -43,7 +42,7 @@ body.index header h1{
 
 body.index header img{
     width: auto;
-    height: 3.5vh;
+    height: 3.75vh;
 }
 
 body.index nav{
@@ -61,7 +60,7 @@ body.index nav ul{
 
 body.index nav ul li{
     padding: 0vw 1vw 0vw 1vw;
-    font-size: 2vh;
+    font-size: 2.2vh;
 }
 
 body.index .Banner2{
@@ -69,7 +68,7 @@ body.index .Banner2{
     background-color: yellow;
     text-align: center;
     padding: 0.4vh 0px 0.4vh 0px;
-    font-size: 1.6vh;
+    font-size: 1.65vh;
 }
 
 body.index .Picture{
