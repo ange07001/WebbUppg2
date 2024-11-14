@@ -8,28 +8,32 @@ body.index .Container{
     min-width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto 4fr 3fr 6fr 2fr;
+    grid-template-rows: auto auto auto 4fr 3.5fr 3fr 6fr 2fr;
     grid-template-areas: 
     "Banner1 Banner1 Banner1 Banner1"
     "Header Nav Nav Nav"
     "Banner2 Banner2 Banner2 Banner2"
     "Picture Picture Picture Picture"
     "Phones Phones Phones Phones"
+    "Buttons Buttons Buttons Buttons"
     "News News LatestNews LatestNews"
     "Footer Footer Footer Footer";
 }   
 
 body.index .Banner1{
     grid-area: Banner1;
-    background-color: green;
+    background-color: #FFF2FC;
     text-align: center;
-    padding: 0.4vh 0px 0.4vh 0px;
-    font-size: 1.65vh;
+    padding: 0.5vh 0px 0.5vh 0px;
+    font-size: 1vw;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
 }
 
 body.index header{
     grid-area: Header;
-    background-color: red;
+    background-color: white;
     padding: 1.5vh 0vh 1.5vh 1vw;;
     display: flex;
     align-items: center;
@@ -37,38 +41,47 @@ body.index header{
 
 body.index header h1{
     padding: 0vh 0.5vw 0vh 1vw;
-    font-size: 3vh;
+    font-size: 2vw;
 }
 
 body.index header img{
     width: auto;
-    height: 3.75vh;
+    height: 2.75vw;
 }
 
 body.index nav{
     grid-area: Nav;
-    background-color: gray;
+    background-color: white;
     display: flex;
-    justify-content: left;
+    justify-content: right;
     align-items: center;
+    padding-right: 5vw;
 }
 
 body.index nav ul{
-    list-style-type: none;
     display: flex;
 }
 
 body.index nav ul li{
     padding: 0vw 1vw 0vw 1vw;
-    font-size: 2.2vh;
+}
+
+body.index nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2vw;
+}
+
+body.index nav ul li a:hover{
+    color: #188fff;
 }
 
 body.index .Banner2{
     grid-area: Banner2;
-    background-color: yellow;
+    background-color: #FFCCF3;
     text-align: center;
     padding: 0.4vh 0px 0.4vh 0px;
-    font-size: 1.65vh;
+    font-size: 1vw;
 }
 
 body.index .Picture{
@@ -76,6 +89,7 @@ body.index .Picture{
     background-color: #EDD8FF;
     text-align: center;
     position: relative;
+    box-shadow: 0 10px 20px -10px gray;
 }
 
 body.index .Picture h2{
@@ -83,7 +97,7 @@ body.index .Picture h2{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgb(255, 255, 255);
+    color: #FFFA94;
     font-size: 5vw;
 }
 
@@ -94,9 +108,76 @@ body.index .Picture img{
     display: block;
 }
 
+body.index .Picture button{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1vw 2vw 1vw 2vw;
+    border-radius: 1.3vw;
+    color: black;
+    border: none;
+    background-color: #FFFA94;
+    cursor: pointer;
+    font-size: 1.3vw;
+}
+
 body.index .Phones{
     grid-area: Phones;
-    background-color: orange;
+    background-color: rgb(252, 252, 252);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+}
+
+body.index .Phones div{
+    box-shadow: 0 10px 30px 0 gray;
+    height:70%;
+    width: 10%;
+    text-align: center;
+    border-radius: 1.3vw;
+    padding-bottom: 0.2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+body.index .Phones h3{
+    font-size: 1.1vw;
+    margin-top: auto;
+}
+
+body.index .Phones p{
+    font-size: 1.1vw;
+    margin-top: 0;
+    padding-bottom: 1vw;
+}
+
+body.index .Phones img{
+    width: 80%;
+    height: auto;
+    padding-top: 1vw;
+}
+
+
+body.index .Buttons{
+    grid-area: Buttons;
+    background: linear-gradient(-20deg, #3D1263, #EDD8FF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    box-shadow: 0 10px 20px 10px gray;
+}
+
+body.index .Buttons button{
+    padding: 1vw 2vw 1vw 2vw;
+    border-radius: 1vw;
+    color: black;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    font-size: 2vw;
 }
 
 body.index .News{
