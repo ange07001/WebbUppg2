@@ -8,13 +8,14 @@ body.index .Container{
     min-width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto 4fr 3.5fr 3fr 6fr 2fr;
+    grid-template-rows: auto auto auto 4fr auto auto auto 6fr 2fr;
     grid-template-areas: 
     "Banner1 Banner1 Banner1 Banner1"
     "Header Nav Nav Nav"
     "Banner2 Banner2 Banner2 Banner2"
     "Picture Picture Picture Picture"
     "Phones Phones Phones Phones"
+    "ButtonsHeader ButtonsHeader ButtonsHeader ButtonsHeader"
     "Buttons Buttons Buttons Buttons"
     "News News LatestNews LatestNews"
     "Footer Footer Footer Footer";
@@ -103,9 +104,10 @@ body.index .Picture h2{
 
 body.index .Picture img{
     width: 50%;
-    height: auto;
+    height: 100%;
     padding: 0 25%;
     display: block;
+    object-fit: cover;
 }
 
 body.index .Picture button{
@@ -129,11 +131,12 @@ body.index .Phones{
     justify-content: center;
     align-items: center;
     gap: 3vw;
+    padding: 3vw 0 3vw 0;
 }
 
 body.index .Phones div{
     box-shadow: 0 10px 30px 0 gray;
-    height:70%;
+    height: auto;
     width: 10%;
     text-align: center;
     border-radius: 1.3vw;
@@ -159,20 +162,24 @@ body.index .Phones img{
     padding-top: 1vw;
 }
 
+body.index .ButtonsHeader{
+    grid-area: ButtonsHeader;
+    background-color: rgb(252, 252, 252);
+    text-align: center;
+    padding: 0.5vw 0px 0vw 0px;
+    font-size: 1.5vw;
+}
+
 
 body.index .Buttons{
     grid-area: Buttons;
-    
-    background: hsla(272, 100%, 92%, 1);
-    background: linear-gradient(-50deg, hsla(272, 100%, 92%, 1) 0%, hsla(314, 100%, 90%, 1) 50%, hsla(58, 100%, 89%, 1) 100%);
-    background: -moz-linear-gradient(-50deg, hsla(272, 100%, 92%, 1) 0%, hsla(314, 100%, 90%, 1) 50%, hsla(58, 100%, 89%, 1) 100%);
-    background: -webkit-linear-gradient(-50deg, hsla(272, 100%, 92%, 1) 0%, hsla(314, 100%, 90%, 1) 50%, hsla(58, 100%, 89%, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EDD8FF", endColorstr="#FFCCF3", GradientType=1 );
+    background-color: rgb(252, 252, 252);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 5vw;
-    box-shadow: 0 10px 20px 10px gray;
+    padding: 2vw 0 3vw 0
 }
 
 body.index .Buttons button{
@@ -182,12 +189,58 @@ body.index .Buttons button{
     border: none;
     cursor: pointer;
     background-color: white;
+    box-shadow: 10px 10px 30px 0 gray;
     font-size: 2vw;
 }
 
 body.index .News{
     grid-area: News;
-    background-color: purple;
+    background-color: rgb(252, 252, 252);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E4F4EF;
+    gap: 1vw;
+    padding: 1vw 1vw 1vw 1vw;
+}
+
+body.index .News .NewsItem{
+    display: flex;
+    width: 80%;
+    height: 25%;
+    background-color: white;
+    box-shadow: 10px 10px 30px 0 gray;
+}
+
+body.index .News .NewsItem picture {
+    width: 50%;
+}
+
+body.index .News .NewsItem picture img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: top;
+}
+
+body.index .News .NewsContent {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1vw;
+    font-size: 1.5vw;
+}
+
+body.index .News .NewsContent h3{
+    margin-top: 0;
+    padding-bottom: 0.5vw;
+}
+
+body.index .News h2{
+    font-size: 2vw;
+    text-align: center;
 }
 
 body.index .LatestNews{
