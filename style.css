@@ -8,7 +8,7 @@ body.index .Container{
     min-width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto 4fr auto auto auto 6fr 2fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto;
     grid-template-areas: 
     "Banner1 Banner1 Banner1 Banner1"
     "Header Nav Nav Nav"
@@ -25,7 +25,7 @@ body.index .Banner1{
     grid-area: Banner1;
     background-color: #FFF2FC;
     text-align: center;
-    padding: 0.5vh 0px 0.5vh 0px;
+    padding: 0.5vw 0px 0.5vw 0px;
     font-size: 1vw;
     display: flex;
     justify-content: center;
@@ -35,13 +35,13 @@ body.index .Banner1{
 body.index header{
     grid-area: Header;
     background-color: white;
-    padding: 1.5vh 0vh 1.5vh 1vw;;
+    padding: 1.3vw 0 1.3vw 1vw;;
     display: flex;
     align-items: center;
 }
 
 body.index header h1{
-    padding: 0vh 0.5vw 0vh 1vw;
+    padding: 0 0.5vw 0 1vw;
     font-size: 2vw;
 }
 
@@ -81,7 +81,7 @@ body.index .Banner2{
     grid-area: Banner2;
     background-color: #FFCCF3;
     text-align: center;
-    padding: 0.4vh 0px 0.4vh 0px;
+    padding: 0.4vw 0px 0.4vw 0px;
     font-size: 1vw;
 }
 
@@ -90,7 +90,7 @@ body.index .Picture{
     background-color: #EDD8FF;
     text-align: center;
     position: relative;
-    box-shadow: 0 10px 20px -10px gray;
+    box-shadow: 0 10px 10px -10px gray;
 }
 
 body.index .Picture h2{
@@ -131,7 +131,7 @@ body.index .Phones{
     justify-content: center;
     align-items: center;
     gap: 3vw;
-    padding: 3vw 0 3vw 0;
+    padding: 6vw 0 6vw 0;
 }
 
 body.index .Phones div{
@@ -147,7 +147,7 @@ body.index .Phones div{
 
 body.index .Phones h3{
     font-size: 1.1vw;
-    margin-top: auto;
+    margin-top: 1vw;
 }
 
 body.index .Phones p{
@@ -179,7 +179,7 @@ body.index .Buttons{
     justify-content: center;
     align-items: center;
     gap: 5vw;
-    padding: 2vw 0 3vw 0
+    padding: 2vw 0 6vw 0
 }
 
 body.index .Buttons button{
@@ -199,17 +199,17 @@ body.index .News{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #E4F4EF;
-    gap: 1vw;
-    padding: 1vw 1vw 1vw 1vw;
+    gap: 4vw;
+    padding: 1vw 1vw 6vw 1vw;
 }
 
 body.index .News .NewsItem{
     display: flex;
     width: 80%;
-    height: 25%;
+    height: auto;
     background-color: white;
     box-shadow: 10px 10px 30px 0 gray;
+    border-radius: 1.2vw;
 }
 
 body.index .News .NewsItem picture {
@@ -228,27 +228,71 @@ body.index .News .NewsContent {
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-left: 1vw;
-    font-size: 1.5vw;
+    padding: 0 2vw 0 2vw;
+    font-size: 1.2vw;
 }
 
 body.index .News .NewsContent h3{
+    padding-top: 1vw;
+    font-size: 1.5vw;
     margin-top: 0;
     padding-bottom: 0.5vw;
 }
 
+body.index .News .NewsContent a{
+    margin-top: auto;
+    margin-bottom: 1vw;
+}
+
 body.index .News h2{
-    font-size: 2vw;
+    font-size: 2.2vw;
     text-align: center;
 }
 
 body.index .LatestNews{
     grid-area: LatestNews;
-    background-color: brown;
+    background-color: rgb(252, 252, 252);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+body.index .LatestNews .LatestContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 30px 0 gray;
+    width: auto;
+    border-radius: 1.2vw;
+    margin: 2vw 0 2vw 0;
+    gap: 1vw;
+}
+
+body.index .LatestNews .LatestContent a{
+    padding: 1.5vw 4vw 1.5vw 4vw;
+    font-size: 1.5vw;
+}
+
+body.index .LatestNews h2{
+    font-size: 2.2vw;
+    padding: 1vw 0 1vw 0;
 }
 
 body.index footer{
     grid-area: Footer;
-    background-color: black;
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    padding: 1vw 2vw 1vw 2vw;
+}
+
+body.index footer div{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    width: 25%;
 }
