@@ -21,7 +21,7 @@ body.index .Container{
     "Footer Footer Footer Footer";
 }   
 
-body.index .Banner1{
+body .Banner1{
     grid-area: Banner1;
     background-color: #FFF2FC;
     text-align: center;
@@ -32,7 +32,7 @@ body.index .Banner1{
     gap: 2vw;
 }
 
-body.index header{
+body header{
     grid-area: Header;
     background-color: white;
     padding: 1.3vw 0 1.3vw 1vw;;
@@ -40,17 +40,17 @@ body.index header{
     align-items: center;
 }
 
-body.index header h1{
+body header h1{
     padding: 0 0.5vw 0 1vw;
     font-size: 2vw;
 }
 
-body.index header img{
+body header img{
     width: auto;
     height: 2.75vw;
 }
 
-body.index nav{
+body nav{
     grid-area: Nav;
     background-color: white;
     display: flex;
@@ -59,25 +59,28 @@ body.index nav{
     padding-right: 5vw;
 }
 
-body.index nav ul{
+body nav ul{
     display: flex;
 }
 
-body.index nav ul li{
+body nav ul li{
     padding: 0vw 1vw 0vw 1vw;
 }
 
-body.index nav ul li a{
+body nav ul li a{
     text-decoration: none;
     color: black;
     font-size: 1.2vw;
 }
 
-body.index nav ul li a:hover{
+body nav ul li a:hover{
     color: #188fff;
 }
 
-body.index .Banner2{
+body nav ul li .active{
+    color: #188fff;
+}
+body .Banner2{
     grid-area: Banner2;
     background-color: #FFCCF3;
     text-align: center;
@@ -134,10 +137,12 @@ body.index .Phones{
     padding: 6vw 0 6vw 0;
 }
 
-body.index .Phones div{
+body.index .Phones a{
     box-shadow: 0 10px 30px 0 gray;
     height: auto;
+    color: black;
     width: 10%;
+    text-decoration: none;
     text-align: center;
     border-radius: 1.3vw;
     padding-bottom: 0.2vw;
@@ -166,7 +171,7 @@ body.index .ButtonsHeader{
     grid-area: ButtonsHeader;
     background-color: rgb(252, 252, 252);
     text-align: center;
-    padding: 0.5vw 0px 0vw 0px;
+    padding-bottom: 1vw;
     font-size: 1.5vw;
 }
 
@@ -213,7 +218,8 @@ body.index .News .NewsItem{
 }
 
 body.index .News .NewsItem picture {
-    width: 50%;
+    width: 20%;
+    height: 100%;
 }
 
 body.index .News .NewsItem picture img {
@@ -242,6 +248,7 @@ body.index .News .NewsContent h3{
 body.index .News .NewsContent a{
     margin-top: auto;
     margin-bottom: 1vw;
+    margin-top: 2vw;
 }
 
 body.index .News h2{
@@ -257,6 +264,7 @@ body.index .LatestNews{
     text-align: center;
     flex-direction: column;
     gap: 1.5vw;
+    padding-bottom: 5vw;
 }
 
 body.index .LatestNews .LatestContent{
@@ -292,8 +300,9 @@ body.index .LatestNews h2{
 }
 
 body.index footer{
+    box-shadow: 10px 10px 30px 0 gray;
     grid-area: Footer;
-    background-color: gray;
+    background: linear-gradient(0deg,#FFFA94, #FFCCF3);
     display: flex;
     flex-direction: row;
     gap: 1vw;
@@ -306,4 +315,22 @@ body.index footer div{
     gap: 1vw;
     width: 25%;
     font-size: 1vw;
+}
+
+@media screen and (max-width: 720px){
+    body.index .Container{
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+        grid-template-areas: 
+        "Banner1 Banner1"
+        "Header Nav"
+        "Banner2 Banner2"
+        "Picture Picture"
+        "Phones Phones"
+        "ButtonsHeader ButtonsHeader"
+        "Buttons Buttons"
+        "News News"
+        "LatestNews LatestNews"
+        "Footer Footer";
+    }
 }
