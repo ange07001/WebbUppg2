@@ -1,6 +1,12 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     overflow-x: hidden;
     margin: 0;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 body.index .Container{
@@ -103,6 +109,8 @@ body.index .Picture h2{
     transform: translate(-50%, -50%);
     color: #FFFA94;
     font-size: 5vw;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
 }
 
 body.index .Picture img{
@@ -210,7 +218,7 @@ body.index .News{
 
 body.index .News .NewsItem{
     display: flex;
-    width: 80%;
+    width: 70%;
     height: auto;
     background-color: white;
     box-shadow: 10px 10px 30px 0 gray;
@@ -218,7 +226,7 @@ body.index .News .NewsItem{
 }
 
 body.index .News .NewsItem picture {
-    width: 20%;
+    width: 30%;
     height: 100%;
 }
 
@@ -263,7 +271,7 @@ body.index .LatestNews{
     align-items: center;
     text-align: center;
     flex-direction: column;
-    gap: 1.5vw;
+    gap: 3vw;
     padding-bottom: 5vw;
 }
 
@@ -333,4 +341,66 @@ body.index footer div{
         "LatestNews LatestNews"
         "Footer Footer";
     }
+}
+
+/* Contact */
+
+body.Contact .Container{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+    "Banner1 Banner1"
+    "Header Nav"
+    "Banner2 Banner2"
+    "Picture Picture"
+    "Form Form"
+    "Footer Footer";
+}
+
+body.Contact .Picture{
+    grid-area: Picture;
+    background-color: #E4F4EF;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 10px -10px gray;
+}
+
+body.Contact Picture h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFA94;
+    font-size: 5vw;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+body.Contact .Picture img{
+    margin: 0 25%;
+    width: 25%;
+    height: auto;
+    object-fit: cover;
+}
+
+body.Contact .Form{
+    grid-area: Form;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+    padding: 1vw 1vw 1vw 1vw;
+}
+
+body.Contact footer{
+    box-shadow: 10px 10px 30px 0 gray;
+    grid-area: Footer;
+    background: linear-gradient(0deg,#FFFA94, #FFCCF3);
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    padding: 1vw 2vw 1vw 2vw;
 }
