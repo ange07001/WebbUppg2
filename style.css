@@ -27,7 +27,7 @@ body.index .Container{
     "Footer Footer Footer Footer";
 }   
 
-body .Banner1{
+body.index .Banner1{
     grid-area: Banner1;
     background-color: #FFF2FC;
     text-align: center;
@@ -38,7 +38,7 @@ body .Banner1{
     gap: 2vw;
 }
 
-body header{
+body.index header{
     grid-area: Header;
     background-color: white;
     padding: 1.3vw 0 1.3vw 1vw;;
@@ -46,17 +46,17 @@ body header{
     align-items: center;
 }
 
-body header h1{
+body.index header h1{
     padding: 0 0.5vw 0 1vw;
     font-size: 2vw;
 }
 
-body header img{
+body.index header img{
     width: auto;
     height: 2.75vw;
 }
 
-body nav{
+body.index nav{
     grid-area: Nav;
     background-color: white;
     display: flex;
@@ -65,28 +65,28 @@ body nav{
     padding-right: 5vw;
 }
 
-body nav ul{
+body.index nav ul{
     display: flex;
 }
 
-body nav ul li{
+body.index nav ul li{
     padding: 0vw 1vw 0vw 1vw;
 }
 
-body nav ul li a{
+body.index nav ul li a{
     text-decoration: none;
     color: black;
     font-size: 1.2vw;
 }
 
-body nav ul li a:hover{
+body.index nav ul li a:hover{
     color: #188fff;
 }
 
-body nav ul li .active{
+body.index nav ul li .active{
     color: #188fff;
 }
-body .Banner2{
+body.index .Banner2{
     grid-area: Banner2;
     background-color: #FFCCF3;
     text-align: center;
@@ -307,7 +307,7 @@ body.index .LatestNews h2{
     padding: 1vw 0 1vw 0;
 }
 
-body.index footer{
+body footer{
     box-shadow: 10px 10px 30px 0 gray;
     grid-area: Footer;
     background: linear-gradient(0deg,#FFFA94, #FFCCF3);
@@ -317,7 +317,7 @@ body.index footer{
     padding: 1vw 2vw 1vw 2vw;
 }
 
-body.index footer div{
+body footer div{
     display: flex;
     flex-direction: column;
     gap: 1vw;
@@ -346,9 +346,9 @@ body.index footer div{
 /* Contact */
 
 body.Contact .Container{
+    min-width: 100vw;
+    min-height: 100vh;
     display: grid;
-    width: 100vw;
-    height: 100vh;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: auto auto auto auto auto auto;
     grid-template-areas:
@@ -368,7 +368,7 @@ body.Contact .Picture{
     box-shadow: 0 10px 10px -10px gray;
 }
 
-body.Contact Picture h2{
+body.Contact .Picture h2{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -379,7 +379,7 @@ body.Contact Picture h2{
     font-weight: bold;
 }
 
-body.Contact .Picture img{
+body.Contact .Picture picture img{
     margin: 0 25%;
     width: 25%;
     height: auto;
@@ -388,19 +388,111 @@ body.Contact .Picture img{
 
 body.Contact .Form{
     grid-area: Form;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1vw;
     padding: 1vw 1vw 1vw 1vw;
 }
 
-body.Contact footer{
-    box-shadow: 10px 10px 30px 0 gray;
-    grid-area: Footer;
-    background: linear-gradient(0deg,#FFFA94, #FFCCF3);
-    display: flex;
-    flex-direction: row;
+body.Contact .Form h2{
+    font-size: 2.2vw;
+    text-align: center;
+}
+
+body.Contact .Form form{
+    padding-top: 2vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1vw;
-    padding: 1vw 2vw 1vw 2vw;
+    width: 100%;
+    font-size: 1vw;
+}
+
+body.Contact .Form form div {
+    display: flex;
+    flex-direction: column;
+}
+
+body.Contact .Form form .full-width {
+    grid-column: 1 / -1;
+    align-items: center;
+}
+
+body.Contact .Form form .full-width textarea {
+    width: 80%;
+}
+
+body.Contact .Form form #submitButton {
+    padding: 1vw 2vw;
+    border-radius: 1vw;
+    color: black;
+    border: none;
+    cursor: pointer;
+    background-color: #FFFA94;
+    font-size: 1.5vw;
+}
+
+body.Contact header {
+    grid-area: Header;
+    background-color: white;
+    padding: 1.3vw 0 1.3vw 1vw;
+    display: flex;
+    align-items: center;
+}
+
+body.Contact header h1 {
+    padding: 0 0.5vw 0 1vw;
+    font-size: 2vw;
+}
+
+body.Contact header img{
+    width: auto;
+    height: 2.75vw;
+}
+
+body.Contact nav {
+    grid-area: Nav;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5vw;
+}
+
+body.Contact nav ul {
+    display: flex;
+}
+
+body.Contact nav ul li {
+    padding: 0vw 1vw;
+}
+
+body.Contact nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2vw;
+}
+
+body.Contact nav ul li a:hover {
+    color: #188fff;
+}
+
+body.Contact nav ul li .active {
+    color: #188fff;
+}
+
+body.Contact .Banner1 {
+    grid-area: Banner1;
+    background-color: #FFF2FC;
+    text-align: center;
+    padding: 0.5vw 0;
+    font-size: 1vw;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+}
+
+body.Contact .Banner2 {
+    grid-area: Banner2;
+    background-color: #FFCCF3;
+    text-align: center;
+    padding: 0.4vw 0;
+    font-size: 1vw;
 }
