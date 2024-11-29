@@ -77,10 +77,12 @@ body.index nav ul li a{
     text-decoration: none;
     color: black;
     font-size: 1.2vw;
+    transition: color 0.3s ease, font-size 0.1s ease;
 }
 
 body.index nav ul li a:hover{
     color: #188fff;
+    font-size: 1.27vw;
 }
 
 body.index nav ul li .active{
@@ -133,6 +135,12 @@ body.index .Picture button{
     background-color: #FFFA94;
     cursor: pointer;
     font-size: 1.3vw;
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.index .Picture button:hover{
+    color: #188fff;
+    box-shadow: 1px 1px 25px 0 #FFFA94;
 }
 
 body.index .Phones{
@@ -156,6 +164,12 @@ body.index .Phones a{
     padding-bottom: 0.2vw;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.index .Phones a:hover{
+    transform: scale(1.1);
+    box-shadow: 12px 12px 35px 0 gray;
 }
 
 body.index .Phones h3{
@@ -204,6 +218,13 @@ body.index .Buttons button{
     background-color: white;
     box-shadow: 10px 10px 30px 0 gray;
     font-size: 2vw;
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.index .Buttons button:hover{
+    color: #188fff;
+    transform: scale(1.1);
+    box-shadow: 12px 12px 35px 0 gray;
 }
 
 body.index .News{
@@ -223,6 +244,12 @@ body.index .News .NewsItem{
     background-color: white;
     box-shadow: 10px 10px 30px 0 gray;
     border-radius: 1.2vw;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.index .News .NewsItem:hover{
+    transform: scale(1.05);
+    box-shadow: 12px 12px 35px 0 gray;
 }
 
 body.index .News .NewsItem picture {
@@ -264,37 +291,56 @@ body.index .News h2{
     text-align: center;
 }
 
-body.index .LatestNews{
+body.index .LatestNews {
     grid-area: LatestNews;
     background-color: rgb(252, 252, 252);
     display: flex;
-    align-items: center;
-    text-align: center;
     flex-direction: column;
-    gap: 3vw;
+    align-items: center;
     padding-bottom: 5vw;
 }
 
-body.index .LatestNews .LatestContent{
+body.index .LatestNews h2 {
+    font-size: 2.2vw;
+    padding: 1vw 0;
+    margin: 0;
+    padding-bottom: 4vw;
+}
+
+
+body.index .LatestNews a {
+    text-decoration: none;
+    color: inherit;
+    width: 80%;
+    display: block;
+    margin-bottom: 2vw;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 10px 10px 30px 0 gray;
+    border-radius: 1.2vw;
+}
+
+
+body.index .LatestNews a:hover {
+    transform: scale(1.05);
+    box-shadow: 12px 12px 35px 0 gray;
+}
+
+
+body.index .LatestNews a .LatestContent {
     display: flex;
     flex-direction: row;
     align-items: center;
-    box-shadow: 10px 10px 30px 0 gray;
-    width: 80%;
-    border-radius: 1.2vw;
+    width: 100%;
     gap: 1vw;
+    overflow: hidden;
 }
 
-body.index .LatestNews .LatestContent a{
-    font-size: 1.5vw;
-}
-
-body.index .LatestNews .LatestContent picture{
+body.index .LatestNews a .LatestContent picture {
     width: 20%;
     height: 100%;
 }
 
-body.index .LatestNews .LatestContent picture img{
+body.index .LatestNews a .LatestContent picture img {
     width: 100%;
     height: 100%;
     display: block;
@@ -302,9 +348,18 @@ body.index .LatestNews .LatestContent picture img{
     object-position: top;
 }
 
-body.index .LatestNews h2{
-    font-size: 2.2vw;
-    padding: 1vw 0 1vw 0;
+body.index .LatestNews a .LatestContent p {
+    font-size: 1.5vw;
+    margin: 0;
+    padding: 0;
+    color: black;
+    flex-grow: 1; 
+    display: flex;
+    align-items: center;
+}
+
+body.index .LatestNews a:hover .LatestContent p {
+    color: #188fff;
 }
 
 body footer{
@@ -405,6 +460,12 @@ body.Contact .Form form{
     font-size: 1vw;
 }
 
+body.Contact .Form form input{
+    border-radius: 0.3vw;
+    border: 1px solid black;
+    padding: 0.4vw;
+}
+
 body.Contact .Form form div {
     display: flex;
     flex-direction: column;
@@ -417,7 +478,12 @@ body.Contact .Form form .full-width {
 
 body.Contact .Form form .full-width textarea {
     width: 80%;
+    resize: none;
+    border-radius: 0.3vw;
+    border: 1px solid black;
+    padding: 0.4vw;
 }
+
 
 body.Contact .Form form #submitButton {
     padding: 1vw 2vw;
@@ -427,6 +493,28 @@ body.Contact .Form form #submitButton {
     cursor: pointer;
     background-color: #FFFA94;
     font-size: 1.5vw;
+    margin-bottom: 5vw;
+    margin-top: 1vw;
+    transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+body.Contact .Form form #submitButton:hover {
+    color: #188fff;
+    box-shadow: 2px 2px 25px 0 gray;
+    transform: scale(1.05);
+}
+
+body.Contact .Form form input::placeholder{
+    font-size: 0.8vw;
+}
+
+body.Contact .Form form textarea::placeholder{
+    font-size: 0.8vw;
+}
+
+body.Contact .Form form input:focus, body.Contact .Form form textarea:focus {
+    outline: none;
+    border: 1px solid #188fff;
 }
 
 body.Contact header {
@@ -468,10 +556,12 @@ body.Contact nav ul li a {
     text-decoration: none;
     color: black;
     font-size: 1.2vw;
+    transition: color 0.3s ease, font-size 0.1s ease;
 }
 
 body.Contact nav ul li a:hover {
     color: #188fff;
+    font-size: 1.25vw;
 }
 
 body.Contact nav ul li .active {
@@ -495,4 +585,13 @@ body.Contact .Banner2 {
     text-align: center;
     padding: 0.4vw 0;
     font-size: 1vw;
+}
+
+@media screen and (max-width: 720px){
+    body.Contact .Form form{
+        grid-template-columns: 1fr;
+        width: 80%;
+        margin-left: 10%;
+    }
+    
 }
