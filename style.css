@@ -27,72 +27,91 @@ body.index .Container{
     "Footer Footer Footer Footer";
 }   
 
-body.index .Banner1{
+.Banner1 {
     grid-area: Banner1;
     background-color: #FFF2FC;
     text-align: center;
-    padding: 0.5vw 0px 0.5vw 0px;
+    padding: 0.5vw 0;
     font-size: 1vw;
     display: flex;
     justify-content: center;
     gap: 2vw;
 }
 
-body.index header{
+header {
     grid-area: Header;
     background-color: white;
-    padding: 1.3vw 0 1.3vw 1vw;;
+    padding: 1.3vw 0 1.3vw 1vw;
     display: flex;
     align-items: center;
 }
 
-body.index header h1{
+header h1 {
     padding: 0 0.5vw 0 1vw;
     font-size: 2vw;
 }
 
-body.index header img{
+header img {
     width: auto;
     height: 2.75vw;
 }
 
-body.index nav{
+nav {
     grid-area: Nav;
     background-color: white;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     align-items: center;
     padding-right: 5vw;
 }
 
-body.index nav ul{
+nav ul {
     display: flex;
 }
 
-body.index nav ul li{
-    padding: 0vw 1vw 0vw 1vw;
+nav ul li {
+    padding: 0vw 1vw;
 }
 
-body.index nav ul li a{
+nav ul li a {
     text-decoration: none;
     color: black;
     font-size: 1.2vw;
-    transition: color 0.3s ease, font-size 0.1s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-body.index nav ul li a:hover{
+nav ul li a:hover {
     color: #188fff;
-    font-size: 1.27vw;
+    transform: scale(1.05);
 }
 
-body.index nav ul li .active{
+nav ul li .active {
     color: #188fff;
 }
-body.index .Banner2{
+
+.Banner2 {
     grid-area: Banner2;
     background-color: #FFCCF3;
     text-align: center;
-    padding: 0.4vw 0px 0.4vw 0px;
+    padding: 0.4vw 0;
+    font-size: 1vw;
+}
+
+footer {
+    grid-area: Footer;
+    box-shadow: 10px 10px 30px 0 gray;
+    background: linear-gradient(0deg, #FFFA94, #FFCCF3);
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    padding: 1vw 2vw;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    width: 25%;
     font-size: 1vw;
 }
 
@@ -362,23 +381,6 @@ body.index .LatestNews a:hover .LatestContent p {
     color: #188fff;
 }
 
-body footer{
-    box-shadow: 10px 10px 30px 0 gray;
-    grid-area: Footer;
-    background: linear-gradient(0deg,#FFFA94, #FFCCF3);
-    display: flex;
-    flex-direction: row;
-    gap: 1vw;
-    padding: 1vw 2vw 1vw 2vw;
-}
-
-body footer div{
-    display: flex;
-    flex-direction: column;
-    gap: 1vw;
-    width: 25%;
-    font-size: 1vw;
-}
 
 @media screen and (max-width: 720px){
     body.index .Container{
@@ -503,7 +505,7 @@ body.Contact .Form form #submitButton {
     cursor: pointer;
     background-color: #FFFA94;
     font-size: 1.5vw;
-    margin-bottom: 5vw;
+    margin-bottom: 200px;
     margin-top: 1.5vw;
     transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
@@ -527,75 +529,7 @@ body.Contact .Form form input:focus, body.Contact .Form form textarea:focus {
     border: 1px solid #188fff;
 }
 
-body.Contact header {
-    grid-area: Header;
-    background-color: white;
-    padding: 1.3vw 0 1.3vw 1vw;
-    display: flex;
-    align-items: center;
-}
 
-body.Contact header h1 {
-    padding: 0 0.5vw 0 1vw;
-    font-size: 2vw;
-}
-
-body.Contact header img{
-    width: auto;
-    height: 2.75vw;
-}
-
-body.Contact nav {
-    grid-area: Nav;
-    background-color: white;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 5vw;
-}
-
-body.Contact nav ul {
-    display: flex;
-}
-
-body.Contact nav ul li {
-    padding: 0vw 1vw;
-}
-
-body.Contact nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.2vw;
-    transition: color 0.3s ease, font-size 0.1s ease;
-}
-
-body.Contact nav ul li a:hover {
-    color: #188fff;
-    font-size: 1.25vw;
-}
-
-body.Contact nav ul li .active {
-    color: #188fff;
-}
-
-body.Contact .Banner1 {
-    grid-area: Banner1;
-    background-color: #FFF2FC;
-    text-align: center;
-    padding: 0.5vw 0;
-    font-size: 1vw;
-    display: flex;
-    justify-content: center;
-    gap: 2vw;
-}
-
-body.Contact .Banner2 {
-    grid-area: Banner2;
-    background-color: #FFCCF3;
-    text-align: center;
-    padding: 0.4vw 0;
-    font-size: 1vw;
-}
 
 @media screen and (max-width: 720px){
     body.Contact .Form form{
@@ -604,4 +538,90 @@ body.Contact .Banner2 {
         margin-left: 10%;
     }
     
+}
+
+/* Products */
+
+body.Products .Container{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+    "Banner1 Banner1"
+    "Header Nav"
+    "Banner2 Banner2"
+    "Picture Picture"
+    "Products Products"
+    "Footer Footer";
+}
+
+body.Products .Picture{
+    grid-area: Picture;
+    background-color: black;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 10px -10px gray;
+}
+
+body.Products .Picture h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: purple;
+    font-size: 5vw;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+body.Products .Picture picture img{
+    margin: 0 25%;
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+body.Products .Products{
+    grid-area: Products;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5vw;
+    padding: 2vw 0 6vw 0;
+}
+
+body.Products .Product{
+    box-shadow: 10px 10px 30px 0 gray;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.2vw;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.Products .Product:hover{
+    transform: scale(1.05);
+    box-shadow: 12px 12px 35px 0 gray;
+}
+
+body.Products .Product img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+}
+
+body.Products .Product h3{
+    font-size: 1.5vw;
+    margin-top: 1vw;
+}
+
+body.Products .Product p{
+    font-size: 1.2vw;
+    margin-top: 0;
+    padding-bottom: 1vw;
 }
