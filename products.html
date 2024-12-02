@@ -39,36 +39,68 @@
                 <img src="assets/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-hero_screen.png" alt="iphone 14 pro">
             </picture>
         </div>
-        <div class="Product">
-            <h2>iPhone 14 Pro</h2>
-            <picture>
-                <img src="assets/iphone-14-pro.webp" alt="iPhone 14 Pro">
-            </picture>
-            <div class="ColorOptions">
-                <button class="ColorButton" data-color="SpaceBlack"></button>
-                <button class="ColorButton" data-color="Silver"></button>
-                <button class="ColorButton" data-color="Gold"></button>
-                <button class="ColorButton" data-color="DeepPurple"></button>
+        <div class="Content">
+            <div class="Product" onclick="window.location.href='#iP14Pro'">
+                <h2>iPhone 14 Pro</h2>
+                <picture>
+                    <img id="iphone-14-pro" src="assets/iphone-14-pro-SpaceBlack.webp" alt="iPhone 14 Pro">
+                </picture>
+                <div class="ColorOptions">
+                    <button class="ColorButton" data-color="SpaceBlack" onclick="changeImage('SpaceBlack', 'iphone-14-pro')"></button>
+                    <button class="ColorButton" data-color="Silver" onclick="changeImage('Silver', 'iphone-14-pro')"></button>
+                    <button class="ColorButton" data-color="Gold" onclick="changeImage('Gold', 'iphone-14-pro')"></button>
+                    <button class="ColorButton" data-color="DeepPurple" onclick="changeImage('DeepPurple', 'iphone-14-pro')"></button>
+                </div>
+                <div class="PriceAndButton">
+                    <h3>14 999kr</h3>
+                    <button onclick="event.stopPropagation(); window.location.href='#buy'">Köp</button>
+                </div>
             </div>
-            <p>14 999kr</p>
-            <button>Köp</button>
-        </div>
-        <div class="Product">
-            <h2>iPhone 14+</h2>
-            <picture>
-                <img src="assets/iphone-14-plus.webp" alt="iPhone 14+">
-            </picture>
-            <div class="ColorOptions">
-                <button class="ColorButton" data-color="Purple"></button>
-                <button class="ColorButton" data-color="Yellow"></button>
-                <button class="ColorButton" data-color="Blue"></button>
-                <button class="ColorButton" data-color="Red"></button>
-                <button class="ColorButton" data-color="Starlight"></button>
-                <button class="ColorButton" data-color="Midnight"></button>
+            <div class="Product" onclick="window.location.href='#iP14+';">
+                <h2>iPhone 14+</h2>
+                <picture>
+                    <img id="iphone-14-plus" src="assets/iphone-14-plus.webp" alt="iPhone 14+">
+                </picture>
+                <div class="ColorOptions">
+                    <button class="ColorButton" data-color="Purple" onclick="changeImage('Purple', 'iphone-14-plus')"></button>
+                    <button class="ColorButton" data-color="Yellow" onclick="changeImage('Yellow', 'iphone-14-plus')"></button>
+                    <button class="ColorButton" data-color="Blue" onclick="changeImage('Blue', 'iphone-14-plus')"></button>
+                    <button class="ColorButton" data-color="Red" onclick="changeImage('Red', 'iphone-14-plus')"></button>
+                    <button class="ColorButton" data-color="Starlight" onclick="changeImage('Starlight', 'iphone-14-plus')"></button>
+                    <button class="ColorButton" data-color="Midnight" onclick="changeImage('Midnight', 'iphone-14-plus')"></button>
+                </div>
+                <div class="PriceAndButton">
+                    <h3>10 999kr</h3>
+                    <button onclick="event.stopPropagation(); window.location.href='#buy'">Köp</button>
+                </div>
             </div>
-            <h3>10 999kr</h3>
-            <button>Köp</button>
+            <div class="Product" onclick="window.location.href='#iP14'">
+                <h2>iPhone 14</h2>
+                <picture>
+                    <img id="iphone-14" src="assets/iphone-14.webp" alt="iPhone 14">
+                </picture>
+                <div class="ColorOptions">
+                    <!-- Lägg till bilderna -->
+                    <button class="ColorButton" data-color="Black" onclick="changeImage('Black', 'iphone-14')"></button>
+                    <button class="ColorButton" data-color="White" onclick="changeImage('White', 'iphone-14')"></button>
+                    <button class="ColorButton" data-color="Green" onclick="changeImage('Green', 'iphone-14')"></button>
+                    <button class="ColorButton" data-color="Pink" onclick="changeImage('Pink', 'iphone-14')"></button>
+                </div>
+                <div class="PriceAndButton">
+                    <h3>12 999kr</h3>
+                    <button onclick="event.stopPropagation(); window.location.href='#buy'">Köp</button>
+                </div>
+            </div>
         </div>
+
+        <script>
+            function changeImage(color, imageId) {
+                event.stopPropagation();
+                const image = document.getElementById(imageId);
+                image.src = `assets/${imageId}-${color}.webp`;
+            }
+        </script>
+
         <footer>
             <div class="FooterItem">
                 <h3>Integritetspolicy</h3>

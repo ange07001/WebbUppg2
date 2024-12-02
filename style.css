@@ -100,7 +100,7 @@ nav ul li .active {
 footer {
     grid-area: Footer;
     box-shadow: 10px 10px 30px 0 gray;
-    background: linear-gradient(0deg, #FFFA94, #FFCCF3);
+    background-color:#FFCCF3;
     display: flex;
     flex-direction: row;
     gap: 1vw;
@@ -584,44 +584,97 @@ body.Products .Picture picture img{
     display: block;
 }
 
-body.Products .Products{
+body.Products .Content{
     grid-area: Products;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     gap: 5vw;
-    padding: 2vw 0 6vw 0;
+    padding: 4vw 0 6vw 0;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
-body.Products .Product{
+body.Products .Content .Product{
+    width: 25%;
+    height: 29vw;
+    background-color: white;
     box-shadow: 10px 10px 30px 0 gray;
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     border-radius: 1.2vw;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-body.Products .Product:hover{
-    transform: scale(1.05);
-    box-shadow: 12px 12px 35px 0 gray;
+body.Products .Content .Product h2{
+    font-size: 1.7vw;
+    padding: 0.8vw;
 }
 
-body.Products .Product img{
-    width: 100%;
+body.Products .Content .Product h3{
+    font-size: 1.5vw;
+}
+
+body.Products .Content .Product picture{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+body.Products .Content .Product picture img{
+    width: 50%;
     height: auto;
     object-fit: cover;
-    object-position: top;
+    display: block;
+    padding-left: 25%;
 }
 
-body.Products .Product h3{
-    font-size: 1.5vw;
-    margin-top: 1vw;
+body.Products .Content .Product .PriceAndButton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+    padding: 1vw;
 }
 
-body.Products .Product p{
+body.Products .Content .Product .PriceAndButton button{
+    padding: 0.5vw 1vw;
+    border-radius: 1vw;
+    color: black;
+    border: none;
+    cursor: pointer;
+    background-color: #FFFA94;
     font-size: 1.2vw;
-    margin-top: 0;
-    padding-bottom: 1vw;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
+
+body.Products .Content .Product:hover{
+    cursor: pointer;
+}
+
+body.Products .Content .Product button:hover{
+    color: #188fff;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+body.Products .Content .Product button{
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+body.Products .Content .Product .ColorOptions{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5vw;
+    padding-top: 0.5vw;
+    margin-top: auto;
+}
+
+body.Products .Content .Product .ColorOptions button{
+    border: none;
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
