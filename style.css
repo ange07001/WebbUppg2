@@ -565,16 +565,36 @@ body.Products .Picture{
     box-shadow: 0 10px 10px -10px gray;
 }
 
-body.Products .Picture h2{
+body.Products .Picture #LeftText{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    color: purple;
-    font-size: 5vw;
+    width: 33%;
+    line-height: 1.1;
+    transform: translate(-135%, -50%);
+    color: white;
+    font-size: 4vw;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
+    padding: 3vw;
 }
+
+body.Products .Picture #RightText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 33%;
+    line-height: 1.1;
+    transform: translate(35%, -50%);
+    color: white;
+    font-size: 4vw;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding: 3vw;
+}
+
+
+
 
 body.Products .Picture picture img{
     margin: 0 25%;
@@ -634,7 +654,7 @@ body.Products .Content .Product .PriceAndButton{
     flex-direction: row;
     align-items: center;
     gap: 1vw;
-    padding: 1vw;
+    padding: 0.5vw 1vw 1vw 1vw;
 }
 
 body.Products .Content .Product .PriceAndButton button{
@@ -666,7 +686,7 @@ body.Products .Content .Product .ColorOptions{
     display: flex;
     flex-direction: row;
     gap: 0.5vw;
-    padding-top: 0.5vw;
+    padding: 0.5vw 1vw 0.5vw 1vw;
     margin-top: auto;
 }
 
@@ -676,5 +696,59 @@ body.Products .Content .Product .ColorOptions button{
     height: 1.5vw;
     border-radius: 50%;
     cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    border-color: gray;
 }
 
+body.Products .ColorButton[data-color="SpaceBlack"],body.Products .ColorButton[data-color="Midnight"]{
+    background-color: black;
+}
+
+body.Products .ColorButton[data-color="Silver"]{
+    background-color: silver;
+}
+
+body.Products .ColorButton[data-color="Gold"]{
+    background-color: rgb(255, 246, 194);
+}
+
+body.Products .ColorButton[data-color="DeepPurple"]{
+    background-color: rgb(70, 24, 70);
+}
+
+body.Products .ColorButton[data-color="Purple"]{
+    background-color: rgb(231, 213, 231);
+}
+
+body.Products .ColorButton[data-color="Yellow"]{
+    background-color: rgb(255, 255, 115);
+}
+
+body.Products .ColorButton[data-color="Blue"]{
+    background-color: rgb(171, 171, 255);
+}
+
+body.Products .ColorButton[data-color="Red"]{
+    background-color: rgb(255, 0, 0);
+}
+
+body.Products .ColorButton[data-color="Starlight"]{
+    background-color: white;
+}
+
+body.Products .ColorButton[data-color="Green"], body.Products .ColorButton[data-color="DarkGreen"]{
+    background-color: rgb(48, 70, 48);
+}
+
+body.Products .ColorButton[data-color="Gray"]{
+    background-color: rgb(80, 80, 80);
+}
+
+body.Products .ColorButton[data-color="DarkBlue"]{
+    background-color: rgb(24, 86, 128);
+}
+
+body.Products .ColorButton[data-color="Pink"]{
+    background-color: pink;
+}
