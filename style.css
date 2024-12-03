@@ -618,10 +618,10 @@ body.Products .Content{
 
 body.Products .Content .Product{
     width: 25%;
-    height: 29vw;
+    height: 30vw;
     background-color: white;
     box-shadow: 10px 10px 30px 0 gray;
-    border-radius: 1.2vw;
+    border-radius: 1.6vw;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -647,6 +647,24 @@ body.Products .Content .Product picture img{
     object-fit: cover;
     display: block;
     padding-left: 25%;
+}
+
+body.Products .Content .storageOptions{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5vw;
+    padding: 0.5vw 1vw 0.5vw 1vw;
+    margin-top: auto;
+}
+
+body.Products .Content .storageOptions h4{
+    cursor: pointer;
+    padding: 0.3vw 0.6vw;
+    border-radius: 0.8vw;
+    color: black;
+    background-color: rgb(227, 227, 227);
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 0.8vw;
 }
 
 body.Products .Content .Product .PriceAndButton{
@@ -687,7 +705,6 @@ body.Products .Content .Product .ColorOptions{
     flex-direction: row;
     gap: 0.5vw;
     padding: 0.5vw 1vw 0.5vw 1vw;
-    margin-top: auto;
 }
 
 body.Products .Content .Product .ColorOptions button{
@@ -726,7 +743,7 @@ body.Products .ColorButton[data-color="Yellow"]{
 }
 
 body.Products .ColorButton[data-color="Blue"]{
-    background-color: rgb(171, 171, 255);
+    background-color: rgb(186, 218, 254);
 }
 
 body.Products .ColorButton[data-color="Red"]{
