@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
@@ -565,35 +564,27 @@ body.Products .Picture{
     box-shadow: 0 10px 10px -10px gray;
 }
 
+body.Products .Picture #LeftText, body.Products .Picture #LeftBottomText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 33%;
+    line-height: 1.1;
+    color: white;
+    font-size: 4vw;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding: 3vw;
+}
+
 body.Products .Picture #LeftText{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 33%;
-    line-height: 1.1;
-    transform: translate(-135%, -50%);
-    color: white;
-    font-size: 4vw;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    padding: 3vw;
+    transform: translate(-135%, -60%);
 }
 
-body.Products .Picture #RightText{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 33%;
-    line-height: 1.1;
-    transform: translate(35%, -50%);
-    color: white;
-    font-size: 4vw;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    padding: 3vw;
+body.Products .Picture #LeftBottomText{
+    transform: translate(-135%, 0%);
+    color: #9f00b4;
 }
-
-
 
 
 body.Products .Picture picture img{
@@ -614,6 +605,7 @@ body.Products .Content{
     padding: 4vw 0 6vw 0;
     padding-left: 5vw;
     padding-right: 5vw;
+    margin-bottom: 300px;
 }
 
 body.Products .Content .Product{
