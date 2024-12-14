@@ -445,28 +445,28 @@ body.Contact .Picture picture img{
 
 body.Contact .Form{
     grid-area: Form;
-    padding: 1vw 1vw 1vw 1vw;
+    padding: 15px;
 }
 
 body.Contact .Form h2{
-    font-size: 2.2vw;
+    font-size: 2.2rem;
     text-align: center;
-    padding: 3vw 0 1vw 0;
+    padding: 45px 0 15px 0;
 }
 
 body.Contact .Form form{
     padding-top: 2vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1vw;
+    gap: 15px;
     width: 100%;
-    font-size: 1vw;
+    font-size: 1rem;
 }
 
 body.Contact .Form form input{
-    border-radius: 0.3vw;
+    border-radius: 5px;
     border: 1px solid black;
-    padding: 0.4vw;
+    padding: 6px;
 }
 
 body.Contact .Form form div {
@@ -475,7 +475,7 @@ body.Contact .Form form div {
 }
 
 body.Contact .Form form label{
-    margin-bottom: 0.5vw;
+    margin-bottom: 7px;
 }
 
 body.Contact .Form form .full-width {
@@ -486,26 +486,26 @@ body.Contact .Form form .full-width {
 body.Contact .Form form .full-width textarea {
     width: 80%;
     resize: none;
-    border-radius: 0.3vw;
+    border-radius: 5px;
     border: 1px solid black;
-    padding: 0.4vw;
+    padding: 6px;
 }
 
 body.Contact .Form form #messageLabel{
-    margin-top: 2vw;
+    margin-top: 30px;
 }
 
 
 body.Contact .Form form #submitButton {
-    padding: 1vw 2vw;
-    border-radius: 1vw;
+    padding: 15px 30px;
+    border-radius: 15px;
     color: black;
     border: none;
     cursor: pointer;
     background-color: #FFFA94;
-    font-size: 1.5vw;
+    font-size: 1.5rem;
     margin-bottom: 200px;
-    margin-top: 1.5vw;
+    margin-top: 23px;
     transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
@@ -516,11 +516,11 @@ body.Contact .Form form #submitButton:hover {
 }
 
 body.Contact .Form form input::placeholder{
-    font-size: 0.8vw;
+    font-size: 0.8rem;
 }
 
 body.Contact .Form form textarea::placeholder{
-    font-size: 0.8vw;
+    font-size: 0.8rem;
 }
 
 body.Contact .Form form input:focus, body.Contact .Form form textarea:focus {
@@ -601,31 +601,31 @@ body.Products .Content{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    gap: 5vw;
-    padding: 4vw 0 6vw 0;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    gap: 75px;
+    padding: 60px 0 75px 0;
+    padding-left: 60px;
+    padding-right: 60px;
     margin-bottom: 300px;
 }
 
 body.Products .Content .Product{
-    width: 25%;
-    height: 30vw;
+    width: 400px;
+    height: auto;
     background-color: white;
     box-shadow: 10px 10px 30px 0 gray;
-    border-radius: 1.6vw;
+    border-radius: 25px;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
 body.Products .Content .Product h2{
-    font-size: 1.7vw;
-    padding: 0.8vw;
+    font-size: 1.7rem;
+    padding: 15px;
 }
 
 body.Products .Content .Product h3{
-    font-size: 1.5vw;
+    font-size: 1.5rem;
 }
 
 body.Products .Content .Product picture{
@@ -644,37 +644,37 @@ body.Products .Content .Product picture img{
 body.Products .Content .storageOptions{
     display: flex;
     flex-direction: row;
-    gap: 0.5vw;
-    padding: 0.5vw 1vw 0.5vw 1vw;
+    gap: 8px;
+    padding: 8px 15px 8px 15px;
     margin-top: auto;
 }
 
 body.Products .Content .storageOptions h4{
     cursor: pointer;
-    padding: 0.3vw 0.6vw;
-    border-radius: 0.8vw;
+    padding: 5px 7px;
+    border-radius: 20px;
     color: black;
     background-color: rgb(227, 227, 227);
     transition: color 0.3s ease, transform 0.3s ease;
-    font-size: 0.8vw;
+    font-size: 0.8rem;
 }
 
 body.Products .Content .Product .PriceAndButton{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 1vw;
-    padding: 0.5vw 1vw 1vw 1vw;
+    gap: 15px;
+    padding: 8px 15px 15px 15px;
 }
 
 body.Products .Content .Product .PriceAndButton button{
-    padding: 0.5vw 1vw;
-    border-radius: 1vw;
+    padding: 8px 15px;
+    border-radius: 20px;
     color: black;
     border: none;
     cursor: pointer;
     background-color: #FFFA94;
-    font-size: 1.2vw;
+    font-size: 1.2rem;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -695,14 +695,14 @@ body.Products .Content .Product button{
 body.Products .Content .Product .ColorOptions{
     display: flex;
     flex-direction: row;
-    gap: 0.5vw;
-    padding: 0.5vw 1vw 0.5vw 1vw;
+    gap: 8px;
+    padding: 8px 15px 8px 15px;
 }
 
 body.Products .Content .Product .ColorOptions button{
     border: none;
-    width: 1.5vw;
-    height: 1.5vw;
+    width: 23px;
+    height: 23px;
     border-radius: 50%;
     cursor: pointer;
     border-width: 1px;
